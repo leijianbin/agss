@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>自助购</title>
+<link type="image/x-icon" rel="shortcut icon" href="http://www.yibada.com/clients/agssshop/images/favicon.ico"/>
+<link href="images/favicon.ico" rel="shortcut icon">
+<link href="css/general.css" type="text/css" rel="stylesheet" />
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+<!--header start -->
+<div id="wideheader">
+	<div class="header wrapper">
+    	<div id="top">
+        	<div id="topleft">
+                <p>AGSS旗下网站  <a href="#">点击进入AGSS国际快运平台</a></p>
+                <div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>
+            </div>
+              <div class="cart">
+                          <a href="#">My Cart (0 items)</a>
+                        </div>
+            <div id="topright">
+            	<div id="toplogin">
+                        <p>欢迎来到美鑫采购</p>
+                        <div class="login">
+                            <a href="login.html">登录</a></div>
+                        <div class="login">
+                            <a href="login.html">注册</a></div>
+                    </div>
+                   
+                
+            </div>
+        </div>
+        <ul id="submenu">
+        	<li class="special"><a href="index.html">首页</a></li>
+            <li class="current"><a href="shopping.html">自助购</a></li>
+            <li ><a href="ordernow.html">现货订购</a>
+            	<ul id="sub">
+                	<li><a href="#">服装鞋类</a></li>
+                    <li><a href="#">箱包配饰</a></li>
+                    <li><a href="#">美容护肤</a></li>
+                    <li><a href="#">营养保健</a></li>
+                    <li><a href="#">母婴家居</a></li>
+                    <li><a href="#">运动户外</a></li>
+                    <li><a href="#">数码影音</a></li>
+                </ul>
+            </li>
+            <li><a href="products.html">产品与服务</a></li>
+            <li><a href="helpcenter.html">帮助中心</a></li>
+            <li><a href="contactus.html">联系我们</a></li>
+        </ul>
+    </div>
+    </div>
+<!--header end -->
+
+<!--content start -->
+<div id="widecontent">
+	<div class="shop wrapper" style="margin-top:10px;">
+    	<div class="shopping">
+        	<div class="aboutshopping">
+            	<p class="about">关于自助购</p>
+                <div class="abouttext">             
+您在美鑫采购网代购商品一定生产的费用：美元原价、国际运费、代购服务费。可能产生的费用：美国当地销售税、美国国内运费、运输保险费还有可能的中国海关关税。具体解释如下：</br>
+代购总费用=网站明码标价+美国国内运费+美国国内消费税+代购服务费+国际运费+可能的海关关税或者保险。
+				 </div>
+            </div>
+            <form name="forma" style="margin-left:38px; margin-top:6px; width:640px;">
+				<p class="about" style="margin-bottom:10px;">到手价预估</p>
+				<table align="center" cellpadding="0" cellspacing="2" bgcolor="#efefef" width="640">
+					<tbody >
+					<tr bgcolor="#ffffff"><td align="center"><p>网站标价</p></td><td align="center"><p>美国国内运费</p></td>
+						<td align="center" width="80" nowrap=""><p>消费税率</p></td><td align="center"><p>包裹重量</p></td><td align="center"><p>税金</p></td><td align="center"><p>国际运费</p></td><td align="center"><p>代购费</p></td><td align="center"><p>人民币到手价</p></td></tr>
+										<tr bgcolor="#ffffff"><td align="center">$<input id="cal_unitprice" size="3" onkeyup="cal()">美元</td>
+										<td align="center">$<input id="domesticshipping" size="5" value="0" onkeyup="cal()">美元</td>
+										<td align="center"><input id="iftax" type="radio" name="iftax" value="0" checked="" onclick="cal()">无<input id="iftax" name="iftax" type="radio" value="1" onclick="cal()">有</td>
+										<td align="center"><input id="weight" name="weight" size="2" value="1" onkeyup="cal()">磅(=0.454kg)</td> 
+										<td align="center"><span id="tax"></span>美元</td>
+										<td align="center"><span id="inter_shipping" style="color:GREEN; font-size:20px;"></span>美元</td>
+										<td align="center"><span id="daigoufei" style="color:GREEN; font-size:20px;"></span>美元</td>
+										<td align="center"><span id="finalPrice" style="color:GREEN; font-size:20px;"></span>元</td></tr>
+						<tr><td colspan="8" align="left"><span id="summary" style="color:red; font-size:12px;"></span></td></tr>
+					</tbody>
+				</table>
+	</form>
+        	<form class="link">
+            		<div class="about" style="margin-bottom:14px; margin-top:-2px;">自助购订单</div>
+                       <div class="specious"><p>商品种数：
+                <select id="quantity" name="quantity" style=" width:74px; height:30px; border:#eeeeee 1px solid; font-size:14px; text-align:0 auto; margin-bottom:20px;">
+                  <option selected="selected" value="1" style="font-size:16px;">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select></p>
+          	</div>
+            <div class="goods1">
+             商品1
+            </div>
+			<p>	
+				购买商品网址： <input class="link1" type="text" name="" value="" />
+            </p>
+            </form> 
+            <form class="fill">
+            	<div><p>商品名称：<input class="name" type="text" name="" value="" /></p></div>
+                <div><p>商品单价：<span> $ </span><input class="size" type="text" name="" value="" /></br></p></div>
+                <div style="float:left;"><p>购买数量：<input class="number" type="text" name="1" value="1"  style="font-size:14px; line-height:20px;"/></p></div>
+                <div style="float:left; margin-top:29px; margin-left:4px;">
+                <button type="button"  style="cursor:pointer; width:17px; height:17px;">
+                <img src="images/plus.png" />
+                </button>
+                <button type="button"  style="cursor:pointer; width:17px; height:17px; border:none;">
+                <img src="images/minus.png" />
+                </button>
+                </div>
+                <div class="clear"></div>
+              <div style="float:left;"><p>商品尺寸：<input class="sale" type="text" name="input" value="" />
+              </p>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+                <div style="float:left; margin-left:52px;">
+                <p>商品颜色：<input class="color" type="text" name="" value="" /></br></p></div>
+                <div class="clear"></div>
+                  <div class="remark">
+                	<p style="margin-top:20px;">商品备注：<input id="agree_userterm"  type="checkbox" checked="true" />
+                    <label for="agree_userterm">如果无特殊商品备注说明—请勾选此项</label></p>
+                     <textarea class="block"  rows="4" cols="" name=""></textarea>
+                </div>
+               <div class="middleline"  style="margin-top:70px;">
+               </div>
+                <div style=" margin-top:20px;">
+                <button class="second" type="button" style="background-color:#e463a3; width:62px; height:34px; font-size:14px; color:#fff; cursor:pointer;">提交</button>
+                <a href="#">清空</a>
+                </div>
+            </form>
+        </div>
+        <div id="dotline">
+        </div>
+        <div id="banners">
+        	<div class="bannershow" style="width:100%;margin-bottom:10px;">
+                	<a target="_blank" href="#"><img src="images/banner1.jpg" /></a>
+                </div>
+                <div class="bannershow" style="width:100%;margin-bottom:10px;">
+                	<a target="_blank" href="#"><img src="images/banner2.jpg" /></a>
+                </div>
+                <div class="bannershow" style="width:100%;margin-bottom:10px;">
+                	<a target="_blank" href="#"><img src="images/banner3.jpg" /></a>
+                </div>
+                <div class="bannershow" style="width:100%;margin-bottom:10px;">
+                	<a target="_blank" href="#"><img src="images/banner4.jpg" /></a>
+                </div>
+                 <div class="bannershow" style="width:100%;margin-bottom:10px;">
+                	<a target="_blank" href="#"><img src="images/banner5.jpg" /></a>
+                </div>
+                <div class="bannershow" style="width:100%;margin-bottom:10px;">
+                	<a target="_blank" href="#"><img src="images/banner6.jpg" /></a>
+                </div>
+        </div>
+    </div>
+</div>
+<!--content end -->
+
+<!--footer start -->
+ <div class="clear"></div>
+   <div id="widefooter">
+	<div class="footer wrapper">
+    	<div class="footerleft">
+    	<ul>
+        	<li><a href="#">自助购</a></li>
+            <li><a href="#">现货订购</a></li>
+            <li><a href="#">产品与服务</a></li>
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">联系我们</a></li>           
+        </ul>
+        <p>Copyright© 2013 AGSSSHOP . All Rights Reserved    Powered by<a target="_blank" href="http://web.yibada.com"> YIBADA</a></p>
+        </div>
+        <div class="footerright">
+        	<ul>
+            	<li><a href="privacypollcy.html">隐私保护</a></li>
+                <li><a href="shippingpolicy.html">运送商品</a></li>
+                <li><a href="securitypolicy.html">交易安全</a></li>
+                <li><a href="returnpolicy.html">退货原则</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+<!--footer end -->
+</body>
+</html>
