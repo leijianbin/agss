@@ -356,7 +356,18 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$this->data['config_layout_id'] = $this->config->get('config_layout_id');
 		}
-				
+		/*
+		/ Checkout Editor
+		*/
+		$this->load->model('setting/checkout');
+		$this->data['step2_description'] = $this->model_setting_checkout->getSingleSetting(2);
+		$this->data['step3_description'] = $this->model_setting_checkout->getSingleSetting(3);
+		$this->data['step4_description'] = $this->model_setting_checkout->getSingleSetting(4);
+		$this->data['step5_description'] = $this->model_setting_checkout->getSingleSetting(5);
+		$this->data['step6_description'] = $this->model_setting_checkout->getSingleSetting(6);
+
+		/*--------------------------*/	
+
 		$this->load->model('design/layout');
 		
 		$this->data['layouts'] = $this->model_design_layout->getLayouts();

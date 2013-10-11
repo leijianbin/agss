@@ -5,7 +5,7 @@ class ControllerHomemanagerPagedata extends Controller {
   	public function index() {
 		$this->load->language('homemanager/pagedata');
     		
-		$this->document->setTitle(str_replace('Home', ucfirst($_GET['layout']), $this->language->get('heading_title'))); 
+		//$this->document->setTitle(str_replace('Home', ucfirst($_GET['layout']), $this->language->get('heading_title'))); 
 		
 		$this->load->model('homemanager/pagedata');
 		
@@ -15,7 +15,7 @@ class ControllerHomemanagerPagedata extends Controller {
   	public function insert() {
     	$this->load->language('homemanager/pagedata');
 
-    	$this->document->setTitle($this->language->get('heading_title')); 
+    	//$this->document->setTitle($this->language->get('heading_title')); 
 		
 		$this->load->model('homemanager/pagedata');
 		
@@ -266,7 +266,7 @@ class ControllerHomemanagerPagedata extends Controller {
 			);
     	}
 		
-		$this->data['heading_title'] = str_replace('Home', ucfirst($_GET['layout']), $this->language->get('heading_title'));		
+		//$this->data['heading_title'] = str_replace('Home', ucfirst($_GET['layout']), $this->language->get('heading_title'));		
 				
 		$this->data['column_id'] = $this->language->get('column_id');	
 		$this->data['column_title'] = $this->language->get('column_title');

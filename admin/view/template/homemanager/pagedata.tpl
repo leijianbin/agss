@@ -13,7 +13,7 @@
   <?php } ?>
   <div class="box">
     <div class="heading">
-      <h1><img src="view/image/product.png" alt="" /> <?php echo $heading_title; ?></h1>
+      <h1><img src="view/image/product.png" alt="" /> <?php echo "首页数据";//$heading_title; ?></h1>
       <div class="buttons"><a onclick="location = '<?php echo $insert; ?>'" class="button"><span><?php echo $button_insert; ?></span></a></div>
     </div>
     <div class="content">

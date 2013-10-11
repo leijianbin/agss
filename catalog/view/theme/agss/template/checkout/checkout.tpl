@@ -15,31 +15,39 @@
     </div>
     <?php if (!$logged) { ?>
     <div id="payment-address">
-      <div class="checkout-heading"><span><?php echo $text_checkout_account; ?></span></div>
+      <div class="checkout-heading"><span><?php echo $text_checkout_account; ?></span>
+      <p><?php echo $step2_description["step_description"];?></p></div>
       <div class="checkout-content"></div>
     </div>
     <?php } else { ?>
     <div id="payment-address">
-      <div class="checkout-heading"><span><?php echo $text_checkout_payment_address; ?></span></div>
+      <div class="checkout-heading"><span><?php echo $text_checkout_payment_address; ?></span>
+	  <p><?php echo $step2_description["step_description"];?></p>
+      </div>
       <div class="checkout-content"></div>
     </div>
     <?php } ?>
     <?php if ($shipping_required) { ?>
     <div id="shipping-address">
-      <div class="checkout-heading"><?php echo $text_checkout_shipping_address; ?></div>
+      <div class="checkout-heading"><?php echo $text_checkout_shipping_address; ?>
+      <p><?php echo $step3_description["step_description"];?></p>
+      </div>
       <div class="checkout-content"></div>
     </div>
     <div id="shipping-method">
-      <div class="checkout-heading"><?php echo $text_checkout_shipping_method; ?></div>
+      <div class="checkout-heading"><?php echo $text_checkout_shipping_method; ?>
+      	<p><?php echo $step4_description["step_description"];?></p></div>
       <div class="checkout-content"></div>
     </div>
     <?php } ?>
     <div id="payment-method">
-      <div class="checkout-heading"><?php echo $text_checkout_payment_method; ?></div>
+      <div class="checkout-heading"><?php echo $text_checkout_payment_method; ?>
+      	<p><?php echo $step5_description["step_description"];?></p></div>
       <div class="checkout-content"></div>
     </div>
     <div id="confirm">
-      <div class="checkout-heading"><?php echo $text_checkout_confirm; ?></div>
+      <div class="checkout-heading"><?php echo $text_checkout_confirm; ?>
+      	<p><?php echo $step6_description["step_description"];?></p></div>
       <div class="checkout-content"></div>
     </div>
   </div>

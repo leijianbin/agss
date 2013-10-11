@@ -102,8 +102,8 @@ class ControllerCommonHeader extends Controller {
 		$this->data['text_homemanager'] = $this->language->get('text_homemanager');
 		$this->data['text_homelayout'] = $this->language->get('text_homelayout');
 		$this->data['text_pagedata'] = $this->language->get('text_pagedata');
-		//$this->data['homelayout'] = $this->url->link('homemanager/homelayout', 'token=' . $this->session->data['token'], 'SSL');
-		//$this->data['pagedata'] = $this->url->link('homemanager/pagedata', 'token=' . $this->session->data['token'], 'SSL');
+		$this->data['homelayout'] = $this->url->link('homemanager/homelayout', 'token=' . $this->session->data['token'], 'SSL');
+		$this->data['pagedata'] = $this->url->link('homemanager/pagedata', 'token=' . $this->session->data['token'], 'SSL');
 		
 		if (!$this->user->isLogged() || !isset($this->request->get['token']) || !isset($this->session->data['token']) || ($this->request->get['token'] != $this->session->data['token'])) {
 			$this->data['logged'] = '';

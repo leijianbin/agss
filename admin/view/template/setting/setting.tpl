@@ -17,7 +17,17 @@
       <div class="buttons"><a onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a><a onclick="location = '<?php echo $cancel; ?>';" class="button"><?php echo $button_cancel; ?></a></div>
     </div>
     <div class="content">
-      <div id="tabs" class="htabs"><a href="#tab-general"><?php echo $tab_general; ?></a><a href="#tab-store"><?php echo $tab_store; ?></a><a href="#tab-local"><?php echo $tab_local; ?></a><a href="#tab-option"><?php echo $tab_option; ?></a><a href="#tab-image"><?php echo $tab_image; ?></a><a href="#tab-mail"><?php echo $tab_mail; ?></a><a href="#tab-fraud"><?php echo $tab_fraud; ?></a><a href="#tab-server"><?php echo $tab_server; ?></a></div>
+      <div id="tabs" class="htabs">
+        <a href="#tab-general"><?php echo $tab_general; ?></a>
+        <a href="#tab-store"><?php echo $tab_store; ?></a>
+        <a href="#tab-checkout-description">结账说明</a>
+        <a href="#tab-local"><?php echo $tab_local; ?></a>
+        <a href="#tab-option"><?php echo $tab_option; ?></a>
+        <a href="#tab-image"><?php echo $tab_image; ?></a>
+        <a href="#tab-mail"><?php echo $tab_mail; ?></a>
+        <a href="#tab-fraud"><?php echo $tab_fraud; ?></a>
+        <a href="#tab-server"><?php echo $tab_server; ?></a>
+      </div>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
         <div id="tab-general">
           <table class="form">
@@ -871,6 +881,31 @@
               <td><textarea name="config_google_analytics" cols="40" rows="5"><?php echo $config_google_analytics; ?></textarea></td>
             </tr>
           </table>
+        </div>
+        <div id="tab-checkout-description">
+          <table class="form">
+            <tr>
+              <td>第 2 步： 运单地址</td>
+              <td><textarea name="setting_step2" cols="100" rows="5"><?php echo $step2_description["step_description"] ?></textarea></td>
+            </tr>
+            <tr>
+              <td>第 3 步： 收件地址</td>
+              <td><textarea name="setting_step3" cols="100" rows="5"><?php echo $step3_description["step_description"] ?></textarea></td>
+            </tr>
+            <tr>
+              <td>第 4 步： 配送方式</td>
+              <td><textarea name="setting_step4" cols="100" rows="20"><?php echo $step4_description["step_description"] ?></textarea></td>
+            </tr>
+            <tr>
+              <td>第 5 步： 支付方式</td>
+              <td><textarea name="setting_step5" cols="100" rows="12"><?php echo $step5_description["step_description"] ?></textarea></td>
+            </tr>
+            <tr>
+              <td>第 6 步： 确认订单</td>
+              <td><textarea name="setting_step6" cols="100" rows="5"><?php echo $step6_description["step_description"] ?></textarea></td>
+            </tr>
+          </table>
+
         </div>
       </form>
     </div>

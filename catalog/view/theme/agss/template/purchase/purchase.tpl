@@ -119,7 +119,7 @@
 				</div>
 			</form> 
 			<form class="fill">
-				<div class="products-all" style="height:483px;">
+				<div class="products-all">
 					<!-- item row start -->
 					<div class="product-row" id="product-1">
 						<div class="goods1">
@@ -161,6 +161,7 @@
 					</div>
 					<!-- item row end -->
 				</div> <!-- end all products -->
+				<div class="clear"></div>
 				<div  style=" margin-top:20px; padding-left: 70px;">
 					<button id="button-cart" class="second" type="button" style="background-color:#e463a3; width:62px; height:34px; font-size:14px; color:#fff; cursor:pointer; ">提交</button>
 					<a href="#">清空</a>

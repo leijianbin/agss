@@ -10,13 +10,14 @@
     <b><?php echo $text_register; ?></b></label>
   <br />
   <?php if ($guest_checkout) { ?>
-  <label for="guest">
+  <!--<label for="guest">
     <?php if ($account == 'guest') { ?>
     <input type="radio" name="account" value="guest" id="guest" checked="checked" />
     <?php } else { ?>
     <input type="radio" name="account" value="guest" id="guest" />
     <?php } ?>
     <b><?php echo $text_guest; ?></b></label>
+  -->
   <br />
   <?php } ?>
   <br />
