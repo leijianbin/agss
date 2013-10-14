@@ -14,7 +14,15 @@
       <div class="buttons"><a onclick="$('#form').submit();" class="button"><?php echo $button_save; ?></a><a onclick="location = '<?php echo $cancel; ?>';" class="button"><?php echo $button_cancel; ?></a></div>
     </div>
     <div class="content">
-      <div id="vtabs" class="vtabs"><a href="#tab-customer"><?php echo $tab_customer; ?></a><a href="#tab-payment"><?php echo $tab_payment; ?></a><a href="#tab-shipping"><?php echo $tab_shipping; ?></a><a href="#tab-product"><?php echo $tab_product; ?></a><a href="#tab-voucher"><?php echo $tab_voucher; ?></a><a href="#tab-total"><?php echo $tab_total; ?></a></div>
+      <div id="vtabs" class="vtabs">
+        <a href="#tab-customer"><?php echo $tab_customer; ?></a>
+        <a href="#tab-payment"><?php echo $tab_payment; ?></a>
+        <a href="#tab-payment-record">订单记账</a>
+        <a href="#tab-shipping"><?php echo $tab_shipping; ?></a>
+        <a href="#tab-product"><?php echo $tab_product; ?></a>
+        <a href="#tab-voucher"><?php echo $tab_voucher; ?></a>
+        <a href="#tab-total"><?php echo $tab_total; ?></a>
+      </div>
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form">
         <div id="tab-customer" class="vtabs-content">
           <table class="form">
@@ -173,6 +181,20 @@
                 <?php } ?></td>
             </tr>
           </table>
+        
+        <!-- 订单记账部分 -->
+        <div id="tab-payment" class="vtabs-content">
+        <p>订单流程基本如下：1订单审核--》2一次付款通知--》3确认订单（已经收到钱并且帮助买到货）--》4官网发货--》5订单入库（货已经到AAE这里）---》6二次通知付款----》7国际发货</p>
+        <p>Admin收到订单后通知用户付款</p>
+
+        <p>
+*Note： 
+1. 第一余额=第一次付费 -订单金额-服务费-其他费用；
+2. 第二次余额=第一次余额+第二次付款-运费；
+3.  订单金额=商品价格+美国国内邮寄费+税, 税率：8.875%, 税金是按照税率计算的结果；</p>
+        </div>
+        <!-- -->
+        
         </div>
         <div id="tab-shipping" class="vtabs-content">
           <table class="form">

@@ -319,13 +319,16 @@ class ControllerSaleOrder extends Controller {
 				'text' => $this->language->get('text_view'),
 				'href' => $this->url->link('sale/order/info', 'token=' . $this->session->data['token'] . '&order_id=' . $result['order_id'] . $url, 'SSL')
 			);
-			
+
+			/* Can't edit the order, only view at this moment
+
 			if (strtotime($result['date_added']) > strtotime('-' . (int)$this->config->get('config_order_edit') . ' day')) {
 				$action[] = array(
 					'text' => $this->language->get('text_edit'),
 					'href' => $this->url->link('sale/order/update', 'token=' . $this->session->data['token'] . '&order_id=' . $result['order_id'] . $url, 'SSL')
 				);
 			}
+			*/
 			
 			$this->data['orders'][] = array(
 				'order_id'      => $result['order_id'],

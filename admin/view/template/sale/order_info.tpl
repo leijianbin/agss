@@ -11,11 +11,15 @@
       <div class="buttons"><a onclick="window.open('<?php echo $invoice; ?>');" class="button"><?php echo $button_invoice; ?></a><a onclick="location = '<?php echo $cancel; ?>';" class="button"><?php echo $button_cancel; ?></a></div>
     </div>
     <div class="content">
-      <div class="vtabs"><a href="#tab-order"><?php echo $tab_order; ?></a><a href="#tab-payment"><?php echo $tab_payment; ?></a>
+      <div class="vtabs">
+        <a href="#tab-order"><?php echo $tab_order; ?></a>
+        <a href="#tab-payment"><?php echo $tab_payment; ?></a>
+        <a href="#tab-payment-record">订单记账</a>
         <?php if ($shipping_method) { ?>
         <a href="#tab-shipping"><?php echo $tab_shipping; ?></a>
         <?php } ?>
-        <a href="#tab-product"><?php echo $tab_product; ?></a><a href="#tab-history"><?php echo $tab_order_history; ?></a>
+        <a href="#tab-product"><?php echo $tab_product; ?></a>
+        <a href="#tab-history"><?php echo $tab_order_history; ?></a>
         <?php if ($maxmind_id) { ?>
         <a href="#tab-fraud"><?php echo $tab_fraud; ?></a>
         <?php } ?>
@@ -224,6 +228,55 @@
           </tr>
         </table>
       </div>
+
+      <!-- 订单记账部分 -->
+      <div id="tab-payment-record" class="vtabs-content">
+      <p>订单流程基本如下：1订单审核--》2一次付款通知--》3确认订单（已经收到钱并且帮助买到货）--》4官网发货--》5订单入库（货已经到AAE这里）---》6二次通知付款----》7国际发货</p>
+      <p>Admin收到订单后通知用户付款</p>
+      <table align="center" cellpadding="0" cellspacing="2" bgcolor="#cccccc" width="640">
+        <tr bgcolor="#ffffff">
+          <th>项目</th>
+          <th>日期</th> 
+          <th>付款金额</th>  
+          <th>订单金额</th> 
+          <th>运费</th> 
+          <th>服务费</th> 
+          <th>其他费用</th> 
+          <th>余额</th> 
+        </tr>
+        <tr bgcolor="#ffffff">
+          <td>第一次付款</td>
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td> 
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td>  
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td> 
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td> 
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td> 
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td> 
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td> 
+        </tr>
+        <tr bgcolor="#ffffff">
+          <td>第二次付款</td>
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td> 
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td>  
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td> 
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td> 
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td> 
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td> 
+          <td><input id="domesticshipping" size="5" value="0" onkeyup="cal()"></td> 
+        </tr>
+      </table>
+      <div class="buttons" style = "float: right; padding-top: 7px; margin-right: 5px;">
+        <a href="#" class="button">修改</a>
+      </div>
+      <div class="clear"></div>
+      <div style = "float: left; width: 480px; display: block;"><p>
+*Note：<br/>
+1. 第一余额=第一次付费 -订单金额-服务费-其他费用; <br/>
+2. 第二次余额=第一次余额+第二次付款-运费；<br/>
+3.  订单金额=商品价格+美国国内邮寄费+税, 税率：8.875%, 税金是按照税率计算的结果；</p></div>
+      </div>
+      <!-- -->
+
       <?php if ($shipping_method) { ?>
       <div id="tab-shipping" class="vtabs-content">
         <table class="form">
